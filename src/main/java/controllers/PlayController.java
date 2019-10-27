@@ -1,0 +1,25 @@
+package controllers;
+
+import models.Game;
+import models.Coordinate;
+import models.Piece;
+import types.Color;
+import types.Error;
+
+public class PlayController{
+
+    public PlayController(Game game) {
+	}
+
+	public Error move(Coordinate origin, Coordinate target){
+        return null;
+    }
+
+	public Piece getPiece(Coordinate origin) {
+		return null;
+	}
+
+	public Color getTurn(){
+		return null;
+	}
+}
