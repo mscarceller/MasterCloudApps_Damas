@@ -9,10 +9,8 @@ import models.StateValue;
 
 public class ResumeControllerTest {
 
-
-
     @Test
-    public void givenResumeControllerWhenResumeGameThenStateIsInitalState(){
+    public void givenResumeControllerWhenResumeGameThenStateIsInitalState() {
         Game game = new Game();
         ResumeController resumeController = new ResumeController(game);
         resumeController.isNewGame(true);

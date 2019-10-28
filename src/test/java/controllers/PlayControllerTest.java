@@ -22,7 +22,7 @@ public class PlayControllerTest {
 
     protected void playGameExampleUntilWhiteDame(Game game, PlayController playController) {
         playController.move(new Coordinate(0, 2), new Coordinate(1, 3));
-		playController.move(new Coordinate(1, 5), new Coordinate(0, 4));
+        playController.move(new Coordinate(1, 5), new Coordinate(0, 4));
         playController.move(new Coordinate(2, 2), new Coordinate(3, 3));
         playController.move(new Coordinate(3, 5), new Coordinate(2, 4));
         playController.move(new Coordinate(4, 2), new Coordinate(5, 3));
@@ -39,7 +39,7 @@ public class PlayControllerTest {
     }
 
     @Before
-    public void initCoordinatesForTests(){
+    public void initCoordinatesForTests() {
         this.originWhite = new Coordinate(0, 2);
         this.targetWhite = new Coordinate(1, 3);
         this.originBlack = new Coordinate(1, 5);
@@ -58,24 +58,21 @@ public class PlayControllerTest {
     }
 
     @Test
-    public void givenPlayControllerWhenMovementIsOnTheSameSquareThenError(){
+    public void givenPlayControllerWhenMovementIsOnTheSameSquareThenError() {
         Game game = new Game();
         PlayController playController = new PlayController(game);
         assertNotNull(playController.move(this.originWhite, this.originWhite));
     }
 
-
     @Test
-    public void givenPlayControllerWhenMoveIncorrectColorPieceThenError(){
+    public void givenPlayControllerWhenMoveIncorrectColorPieceThenError() {
         Game game = new Game();
         PlayController playController = new PlayController(game);
         assertNotNull(playController.move(this.originBlack, this.targetBlack));
     }
 
-
-
     @Test
-    public void givenPlayControllerWhenMovePieceThenTurnChange(){
+    public void givenPlayControllerWhenMovePieceThenTurnChange() {
         Game game = new Game();
         PlayController playController = new PlayController(game);
         assertEquals(Color.WHITE, playController.getTurn());
@@ -83,12 +80,11 @@ public class PlayControllerTest {
         assertEquals(Color.BLACK, playController.getTurn());
         assertNotNull(playController.move(this.originBlack, this.targetBlack));
         assertEquals(Color.WHITE, playController.getTurn());
-        
+
     }
 
-
     @Test
-    public void givenPlayControllerWhenWhiteIsWinnerThenColorWhite(){     
+    public void givenPlayControllerWhenWhiteIsWinnerThenColorWhite() {
         Game game = new Game();
         PlayController playController = new PlayController(game);
         playGameExampleUntilWhiteDame(game, playController);
@@ -104,8 +100,8 @@ public class PlayControllerTest {
         playController.move(new Coordinate(1, 5), new Coordinate(2, 4));
         playController.move(new Coordinate(7, 5), new Coordinate(5, 7)); // Dama!!
         playController.move(new Coordinate(7, 7), new Coordinate(6, 6));
-        playController.move(new Coordinate(5, 7), new Coordinate(3, 5)); // Salto 
-        playController.move(new Coordinate(3, 5), new Coordinate(1, 3)); // Salto 
+        playController.move(new Coordinate(5, 7), new Coordinate(3, 5)); // Salto
+        playController.move(new Coordinate(3, 5), new Coordinate(1, 3)); // Salto
         playController.move(new Coordinate(6, 6), new Coordinate(7, 5));
         playController.move(new Coordinate(3, 3), new Coordinate(5, 5));
         playController.move(new Coordinate(7, 5), new Coordinate(6, 4));
@@ -117,7 +113,7 @@ public class PlayControllerTest {
     }
 
     @Test
-    public void givenPlayControllerWhenPieceArriveFinalBoardThenThePieceIsDame(){
+    public void givenPlayControllerWhenPieceArriveFinalBoardThenThePieceIsDame() {
         Game game = new Game();
         PlayController playController = new PlayController(game);
         playGameExampleUntilWhiteDame(game, playController);

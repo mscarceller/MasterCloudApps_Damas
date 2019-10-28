@@ -1,4 +1,4 @@
-  
+
 package models;
 
 import static org.junit.Assert.assertEquals;
@@ -8,33 +8,31 @@ import types.Color;
 
 public class TurnTest {
 
-
-    @Test
-    public void givenTurnWhenCreateTurnThenFirstTurnIsForWhites(){
+	@Test
+	public void givenTurnWhenCreateTurnThenFirstTurnIsForWhites() {
 		Turn turn = new Turn();
 		Color turnColor = turn.getTurnColor();
 		Color expectedColor = Color.WHITE;
-		assertEquals(expectedColor, turnColor);  
-    }
+		assertEquals(expectedColor, turnColor);
+	}
 
-    @Test
+	@Test
 	public void givenTurnWhenOneTurnIsPlayedThenChangeTurnColorCorrectly() {
 		Turn turn = new Turn();
 		turn.changeTurn();
 		Color resultColor = turn.getTurnColor();
 		Color expectedColor = Color.BLACK;
 		assertEquals(expectedColor, resultColor);
-    }
-    
-    @Test
+	}
+
+	@Test
 	public void givenTurnWhenTwoTurnsArePlayedThenChangeTurnColorTwiceCorrectly() {
 		Turn turn = new Turn();
-        turn.changeTurn();
-        turn.changeTurn();
+		turn.changeTurn();
+		turn.changeTurn();
 		Color resultColor = turn.getTurnColor();
 		Color expectedColor = Color.WHITE;
 		assertEquals(expectedColor, resultColor);
 	}
-
 
 }

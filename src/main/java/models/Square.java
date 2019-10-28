@@ -1,9 +1,9 @@
 package models;
+
 import types.Error;
 
 public class Square {
 
-  
 	public Square(Coordinate coordinate) {
 	}
 
@@ -12,12 +12,10 @@ public class Square {
 	}
 
 	public Error setPiece(Piece piece) {
-        return null;
+		return null;
 	}
 
 	public void removePiece() {
 	}
 
-
-  
 }

@@ -4,9 +4,9 @@ import models.Coordinate;
 import models.Game;
 import models.Piece;
 
-public class MoveController{
+public class MoveController {
 
-    public MoveController(Game game) {
+	public MoveController(Game game) {
 	}
 
 	public Object move(Coordinate originWhite, Coordinate targetWhite) {
@@ -17,9 +17,8 @@ public class MoveController{
 		return null;
 	}
 
-	public void setPiece(Piece piece,Coordinate targetCoordinate){
+	public void setPiece(Piece piece, Coordinate targetCoordinate) {
 
 	}
-
 
 }

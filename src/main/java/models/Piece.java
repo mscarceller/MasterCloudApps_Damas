@@ -4,7 +4,6 @@ import types.Color;
 
 public abstract class Piece {
 
-
 	public Piece(Color color) {
 	}
 

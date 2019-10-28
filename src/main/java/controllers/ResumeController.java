@@ -3,10 +3,9 @@ package controllers;
 import models.Game;
 import models.StateValue;
 
+class ResumeController {
 
-class ResumeController{
-
-    public ResumeController(Game game) {
+	public ResumeController(Game game) {
 	}
 
 	public void isNewGame(boolean b) {
@@ -15,6 +14,5 @@ class ResumeController{
 	public StateValue getState() {
 		return null;
 	}
-
 
 }

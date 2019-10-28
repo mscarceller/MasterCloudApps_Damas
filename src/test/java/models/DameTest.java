@@ -1,4 +1,4 @@
-  
+
 package models;
 
 import static org.junit.Assert.assertTrue;
@@ -11,13 +11,13 @@ import types.Color;
 public class DameTest {
 
     @Test
-    public void givenDameWhenCreatePieceThenReturnIsTrueDame(){
+    public void givenDameWhenCreatePieceThenReturnIsTrueDame() {
         Piece piece = new Pawn(Color.WHITE);
-        assertTrue(piece.isDame()); 
+        assertTrue(piece.isDame());
     }
 
     @Test
-    public void givenDameWhenCreatePieceThenReturnCorrectColor(){
+    public void givenDameWhenCreatePieceThenReturnCorrectColor() {
         Piece whiteDame = new Pawn(Color.WHITE);
         assertEquals(Color.WHITE, whiteDame.getColor());
         Piece blackDame = new Pawn(Color.BLACK);

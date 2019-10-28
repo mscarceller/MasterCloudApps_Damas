@@ -1,10 +1,8 @@
 package controllers;
 
-
-class AcceptController{
+class AcceptController {
 
     public AcceptController() {
-	}
-
+    }
 
 }

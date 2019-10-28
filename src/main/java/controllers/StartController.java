@@ -3,21 +3,16 @@ package controllers;
 import models.Game;
 import models.Turn;
 
+class StartController {
 
-class StartController{
-
-    public StartController(Game game) {
+	public StartController(Game game) {
 	}
 
-    
-    
-    public void start() {}
-
-
+	public void start() {
+	}
 
 	public Turn getTurn() {
 		return null;
 	}
-
 
 }

@@ -1,8 +1,8 @@
 package models;
 
 public enum StateValue {
-	INITIAL,
+	INITIAL, 
 	IN_GAME,
-	FINAL,
+	FINAL, 
 	EXIT;
 }

@@ -2,12 +2,12 @@ package models;
 
 public class State {
 
-    private StateValue stateValue;
+	private StateValue stateValue;
 
 	public State() {
 	}
 
-    public void next() {
+	public void next() {
 		this.stateValue = StateValue.values()[this.stateValue.ordinal() + 1];
 	}
 
@@ -20,7 +20,5 @@ public class State {
 
 	public void setState(StateValue newState) {
 	}
-
-
 
 }

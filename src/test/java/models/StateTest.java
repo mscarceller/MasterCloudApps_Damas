@@ -6,9 +6,8 @@ import org.junit.Test;
 
 public class StateTest {
 
-
-@Test
-    public void givenStateWhenStateGoFordwardThenStatesFlowIsCorrect(){
+    @Test
+    public void givenStateWhenStateGoFordwardThenStatesFlowIsCorrect() {
         State state = new State();
         assertEquals(StateValue.INITIAL, state.getStateValue());
         state.next();
@@ -16,11 +15,11 @@ public class StateTest {
         state.next();
         assertEquals(StateValue.FINAL, state.getStateValue());
         state.next();
-        assertEquals(StateValue.EXIT, state.getStateValue());   
+        assertEquals(StateValue.EXIT, state.getStateValue());
     }
 
     @Test
-    public void givenStateWhenResetStateThenStateValueisINITIAL(){
+    public void givenStateWhenResetStateThenStateValueisINITIAL() {
         State state = new State();
         state.next();
         state.next();
@@ -29,7 +28,7 @@ public class StateTest {
     }
 
     @Test
-    public void givenStateWhenSetNewStatethenGetTheSameStateValue(){
+    public void givenStateWhenSetNewStatethenGetTheSameStateValue() {
         State state = new State();
         state.setState(StateValue.IN_GAME);
         assertEquals(StateValue.IN_GAME, state.getStateValue());

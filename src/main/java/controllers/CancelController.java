@@ -1,13 +1,11 @@
 package controllers;
 
+class CancelController {
 
-class CancelController{
-
-    public CancelController() {
+	public CancelController() {
 	}
 
 	public void cancelGame() {
 	}
-
 
 }

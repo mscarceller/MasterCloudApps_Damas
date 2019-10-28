@@ -1,10 +1,8 @@
 package controllers;
 
-
-public abstract class Controller{
+public abstract class Controller {
 
     public Controller() {
-	}
-
+    }
 
 }

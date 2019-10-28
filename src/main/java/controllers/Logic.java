@@ -6,11 +6,11 @@ import models.Game;
 
 public class Logic {
 
-    State state;
-    Game game;
+	State state;
+	Game game;
 
-    public Logic(){
-    }
+	public Logic() {
+	}
 
 	public StateValue getStateValue() {
 		return null;
@@ -20,10 +20,8 @@ public class Logic {
 		return null;
 	}
 
-
 	public void nextState() {
 
 	}
 
-	
 }

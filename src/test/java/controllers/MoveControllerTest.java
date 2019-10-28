@@ -21,10 +21,10 @@ public class MoveControllerTest {
     private Coordinate wrongTargetWhite;
 
     @Before
-    public void initCoordinatesForTests(){
+    public void initCoordinatesForTests() {
         this.originWhite = new Coordinate(2, 2);
         this.targetWhite = new Coordinate(1, 3);
-        this.wrongTargetWhite = new Coordinate(2,3);
+        this.wrongTargetWhite = new Coordinate(2, 3);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class MoveControllerTest {
         Game game = new Game();
         MoveController moveController = new MoveController(game);
         Pawn piece = new Pawn(Color.WHITE);
-        moveController.setPiece(piece,this.originWhite);
+        moveController.setPiece(piece, this.originWhite);
         assertNull(moveController.move(this.originWhite, this.targetWhite));
         assertNull(moveController.getPiece(this.originWhite));
         Piece pieceTarget = moveController.getPiece(this.targetWhite);
@@ -41,16 +41,16 @@ public class MoveControllerTest {
     }
 
     @Test
-    public void givenMoveControllerWhenMovementIsOnTheSameSquareThenError(){
+    public void givenMoveControllerWhenMovementIsOnTheSameSquareThenError() {
         Game game = new Game();
         MoveController moveController = new MoveController(game);
         Pawn piece = new Pawn(Color.WHITE);
-        moveController.setPiece(piece,this.originWhite);
-        assertNotNull(moveController.move(this.originWhite,this.originWhite));
+        moveController.setPiece(piece, this.originWhite);
+        assertNotNull(moveController.move(this.originWhite, this.originWhite));
     }
 
     @Test
-    public void givenMoveControllerWhenIllegalMovementThenError(){
+    public void givenMoveControllerWhenIllegalMovementThenError() {
         Game game = new Game();
         MoveController moveController = new MoveController(game);
         assertNotNull(moveController.move(this.originWhite, this.wrongTargetWhite));

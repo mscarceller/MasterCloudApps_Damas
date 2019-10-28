@@ -10,14 +10,12 @@ import types.Color;
 
 public class StartControllerTest {
 
-
     @Test
-    public void givenStartControllerWhenInitGameThenTurnIsForWhites(){
+    public void givenStartControllerWhenInitGameThenTurnIsForWhites() {
         Game game = new Game();
         StartController startController = new StartController(game);
         startController.start();
         assertEquals(Color.WHITE, startController.getTurn());
     }
-
 
 }
