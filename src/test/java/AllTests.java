@@ -6,6 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
     controllers.AllTests.class,
     models.AllTests.class,
+    CheckersTest.class
 	})
 public class AllTests {
 

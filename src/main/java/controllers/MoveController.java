@@ -17,5 +17,9 @@ public class MoveController{
 		return null;
 	}
 
+	public void setPiece(Piece piece,Coordinate targetCoordinate){
+
+	}
+
 
 }

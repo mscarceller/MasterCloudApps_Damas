@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import models.Game;
+import models.Pawn;
 import models.Coordinate;
 import models.Piece;
 import types.Color;
@@ -30,6 +31,8 @@ public class MoveControllerTest {
     public void givenMoveControllerWhenMovementRequiereCorrectThenNotError() {
         Game game = new Game();
         MoveController moveController = new MoveController(game);
+        Pawn piece = new Pawn(Color.WHITE);
+        moveController.setPiece(piece,this.originWhite);
         assertNull(moveController.move(this.originWhite, this.targetWhite));
         assertNull(moveController.getPiece(this.originWhite));
         Piece pieceTarget = moveController.getPiece(this.targetWhite);
@@ -41,6 +44,8 @@ public class MoveControllerTest {
     public void givenMoveControllerWhenMovementIsOnTheSameSquareThenError(){
         Game game = new Game();
         MoveController moveController = new MoveController(game);
+        Pawn piece = new Pawn(Color.WHITE);
+        moveController.setPiece(piece,this.originWhite);
         assertNotNull(moveController.move(this.originWhite,this.originWhite));
     }
 

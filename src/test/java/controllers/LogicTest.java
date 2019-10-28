@@ -11,8 +11,6 @@ import models.StateValue;
 
 public class LogicTest {
 
-
-
     @Test
     public void givenLogicWhenLogicIsCreatedFirstStateIsINITIAL(){
         Logic logic = new Logic();
@@ -24,7 +22,6 @@ public class LogicTest {
         Logic logic = new Logic();
         assertEquals(AcceptController.class, logic.getController());
         assertTrue(logic.getController() instanceof  AcceptController);
-
     }
 
     @Test
